@@ -40,7 +40,7 @@ const JobCard = () => {
                                 <span>Гибкий график</span>
                             </div>
                             <div className="cardMain__badges-item">
-                                <span>Компенсация учебы</span>
+                                <span>Компенсация</span>
                             </div>
                         </div>
                     </div>

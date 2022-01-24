@@ -1,0 +1,21 @@
+{
+    "vacancy": [
+        {
+            "id": "1",
+            "logoImg": "https://vacancyimages.rabota.ua/custom-vacancy-93767138-9bd2-408f-bbdf-31c38f6c5286.png",
+            "status": "Новая",
+            "vacancyName": "Продавец-консультант (ТРЦ Дарынок, ТРЦ Рив Гош, ТРЦ Нью Вей, м. Дарница)",
+            "vacancyLogo": "",
+            "salaryRate": "10 000  — 15 000 ₴",
+            "salaryDescr": "Ставка + процент от продаж",
+            "addressCompany": "FISHKI.UA",
+            "addressCity": "Киев",
+            "benefits": [
+                "Обеды в офис",
+                "Гибкий график",
+                "Компенсация"
+            ],
+            "time": "37 минут назад"
+        }
+    ]
+}
