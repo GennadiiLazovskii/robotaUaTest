@@ -1,0 +1,132 @@
+@media(max-width: 768px) {
+    .cardMain {
+        &__wrapper {
+            width: 576px;
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: 556px;
+        }
+        &__logo {
+            margin-bottom: 20px;
+            img {
+                width: 576px;
+                height: 60px;
+            }
+        }
+        &__description {
+            width: 556px;
+            margin: 0 auto;
+            margin-left: 10px;
+        }
+        &__vacancy {
+            display: grid;
+            grid-template-columns: 430px 120px;
+            grid-template-rows: 30px;
+            column-gap: 25px;
+            align-items: center;
+            justify-content: space-between;
+            &-name {
+                width: 100%;
+            }
+            &-logo {
+                img {
+                    width: 90px;
+                    height: 50px;
+                }
+            }
+        }
+        &__salary {
+            margin-top: 15px;
+        }
+        &__footer {
+            &-btn {
+                width: 556px;
+                margin: 0 auto 10px auto;
+                display: grid;
+                grid-template-columns: 258px auto 102px;
+                grid-template-rows: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .cardMain {
+        &__wrapper {
+            width: 340px;
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: 340px;
+        }
+        &__logo {
+            margin-bottom: 20px;
+            img {
+                width: 340px;
+                height: 50px;
+            }
+        }
+        &__description {
+            width: 320px;
+            margin: 0 auto;
+        }
+        &__vacancy {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100%;
+            column-gap: 10px;
+            &-name {
+                width: 230px;
+            }
+            &-logo {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &__salary {
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(1fr, 1fr));
+            grid-template-rows: 40px;
+            justify-content: start;
+        }
+        &__badges {
+            width: 100%;
+            overflow: scroll;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(116px, auto));
+            grid-template-rows: 30px;
+            justify-content: start;
+            justify-items: center;
+            margin-bottom: 10px;
+            &-item {
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+        &__footer {
+            &-btn {
+                width: 310px;
+                margin: 0 auto 10px auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap-reverse;
+            }
+            &-people {
+                margin-right: 50px;
+            }
+            &-favorites {
+                width: 50px;
+                height: 50px;
+            }
+            &-bad {
+                width: 50px;
+                height: 50px;
+            }
+            &-time {
+                margin-left: 7px;
+            }
+        }
+    }
+}

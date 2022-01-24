@@ -3,6 +3,7 @@ import imgJobLogo from '../../resources/img/Prof-Photo.jpg';
 import vacancyLogo from '../../resources/img/vacancy-Name.png';
 import { BatFalse, BatTrue, FavoritesFalse, FavoritesTrue, Group } from '../../resources/btn/Icons';
 import './jobCard.scss';
+import './media_jobCard.scss';
 
 const JobCard = () => {
 
@@ -32,14 +33,14 @@ const JobCard = () => {
                             <div className="cardMain__address-city">Киев</div>
                         </div>
                         <div className="cardMain__badges">
-                            <div className="cardMain__badges">
+                            <div className="cardMain__badges-item">
                                 <span>Обеды в офис</span>
                             </div>
-                            <div className="cardMain__badges">
+                            <div className="cardMain__badges-item">
                                 <span>Гибкий график</span>
                             </div>
-                            <div className="cardMain__badges">
-                                <span>Компенсация спортзала</span>
+                            <div className="cardMain__badges-item">
+                                <span>Компенсация учебы</span>
                             </div>
                         </div>
                     </div>
