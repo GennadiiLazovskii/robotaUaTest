@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import uploadcare from 'uploadcare-widget/uploadcare.lang.en.min.js';
 import {
     BatFalse,
     BatTrue,
@@ -28,25 +29,32 @@ const JobCard = ({
     const [batBtn, setBatBtn] = useState(false);
     const [favorites, setFavorites] = useState(false);
 
+    const Responce = () => {
+
+        return {
+
+        }
+    }
+
     const Status = () => {
 
-            if(!batBtn) {
-                return <span className="cardMain__status-new">{statusText}</span>
-            } else {
-                return <span style={{color: '#303A3E', width: '118px', background: '#C8D1D6'}} className="cardMain__status-new">Неинтересная</span>
-            }
+        if (!batBtn) {
+            return <span className="cardMain__status-new">{statusText}</span>
+        } else {
+            return <span style={{ color: '#303A3E', width: '118px', background: '#C8D1D6' }} className="cardMain__status-new">Неинтересная</span>
+        }
     }
 
     return (
         <Container>
-            <div style={batBtn ? {opacity: ".5"} : {opacity: "1"}} className="cardMain">
+            <div style={batBtn ? { opacity: ".5" } : { opacity: "1" }} className="cardMain">
                 <div className="cardMain__wrapper">
                     <div className="cardMain__logo">
                         <img src={imgJobLogo} alt="Job Logo" />
                     </div>
                     <div className="cardMain__description">
                         <div className="cardMain__status">
-                            <Status/>
+                            <Status />
                         </div>
                         <div className="cardMain__vacancy">
                             <div className="cardMain__vacancy-name">
@@ -80,11 +88,16 @@ const JobCard = ({
                     </div>
                     <div className="cardMain__footer">
                         <div className="cardMain__footer-btn">
-                            <div className="cardMain__footer-response">
-                                <button className="cardMain__footer-people">
-                                    <img src={Group} alt="Group Btn" />
-                                    Откликнуться
-                                </button>
+                            <div style={batBtn ? {display: 'none'} : {display: 'block'}} className="cardMain__footer-people">
+                                <img src={Group} alt="Group Btn" />
+                                <input
+                                    type="hidden"
+                                    role="uploadcare-uploader"
+                                    data-public-key="64a89cdc6350badf0291"
+                                    data-tabs="file camera url facebook gdrive gphotos"
+                                />
+                            </div>
+                            <div className="cardMain__footer-grupBtn">
                                 <button onClick={() => setFavorites(!favorites)} className="cardMain__footer-favorites">
                                     <img src={favorites ? FavoritesTrue : FavoritesFalse} alt="Favorites Btn" />
                                 </button>
