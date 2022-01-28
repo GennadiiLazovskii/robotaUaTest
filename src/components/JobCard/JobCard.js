@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import uploadcare from 'uploadcare-widget/uploadcare.full.min.js';
+import useLocalStorage from '../hooks/useLocalStorage';
 import {
     BatFalse,
     BatTrue,
@@ -12,6 +13,7 @@ import "./jobCard.scss";
 import "./media_jobCard.scss";
 
 const JobCard = ({
+    id,
     imgJobLogo,
     statusText,
     vacancyName,
@@ -26,9 +28,8 @@ const JobCard = ({
     time,
 }) => {
 
-    const [batBtn, setBatBtn] = useState(false);
+    const [batBtn, setBatBtn] = useLocalStorage("status", false);
     const [favorites, setFavorites] = useState(false);
-    const [upload, setUpload] = useState(null);
 
     const Status = () => {
 
@@ -41,7 +42,7 @@ const JobCard = ({
 
     return (
         <Container>
-            <div style={batBtn ? { opacity: ".5" } : { opacity: "1" }} className="cardMain">
+            <div id={id} style={batBtn ? { opacity: ".5" } : { opacity: "1" }} className="cardMain">
                 <div className="cardMain__wrapper">
                     <div className="cardMain__logo">
                         <img src={imgJobLogo} alt="Job Logo" />
