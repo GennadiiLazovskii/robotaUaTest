@@ -32,8 +32,8 @@
     &__vacancy {
         display: grid;
         grid-template-columns: 565px 120px;
-        grid-template-rows: 60px;
         column-gap: 25px;
+        align-items: center;
         &-name {
             width: 565px;
             font-family: Graphik LC;
@@ -45,8 +45,8 @@
         }
         &-logo {
             img {
-                width: 120px;
-                height: 60px;
+                max-width: 120px;
+                max-height: 60px;
             }
         }
     }
@@ -80,6 +80,7 @@
         grid-template-columns: repeat(2, minmax(100px, auto));
         grid-template-rows: 20px;
         justify-content: start;
+        align-items: center;
         &-company {
             font-family: Graphik LC;
             font-style: normal;
@@ -102,11 +103,13 @@
         margin-top: 10px;
         width: 710px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(116px, auto));
+        grid-template-columns: repeat(auto-fit, minmax(116px, auto));
         grid-template-rows: 30px;
         justify-content: start;
         column-gap: 10px;
         &-item {
+            display: block;
+            margin: 0 auto;
             border: 1px solid #C8D1D6;
             box-sizing: border-box;
             border-radius: 5px;

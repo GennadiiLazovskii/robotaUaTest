@@ -1,12 +1,12 @@
 import AppHeader from "../AppHeader/AppHeader";
-import JobCard from "../JobCard/JobCard";
+import JobCardItem from "../JobCardItem/JobCardItem";
 
 function App() {
   return (
     <div className="App">
       <AppHeader/>
       <main>
-        <JobCard/>
+        <JobCardItem/>
       </main>
     </div>
   );

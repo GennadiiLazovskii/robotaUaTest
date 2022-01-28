@@ -19,5 +19,5 @@ export const useHttp = () => {
         }
     }, []);
 
-    return {reques}
+    return {request};
 }
