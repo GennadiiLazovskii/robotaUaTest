@@ -13,7 +13,6 @@ import "./jobCard.scss";
 import "./media_jobCard.scss";
 
 const JobCard = ({
-    id,
     imgJobLogo,
     statusText,
     vacancyName,
@@ -42,7 +41,7 @@ const JobCard = ({
 
     return (
         <Container>
-            <div id={id} style={batBtn ? { opacity: ".5" } : { opacity: "1" }} className="cardMain">
+            <div style={batBtn ? { opacity: ".5" } : { opacity: "1" }} className="cardMain">
                 <div className="cardMain__wrapper">
                     <div className="cardMain__logo">
                         <img src={imgJobLogo} alt="Job Logo" />
@@ -90,7 +89,6 @@ const JobCard = ({
                                     role="uploadcare-uploader"
                                     data-public-key="64a89cdc6350badf0291"
                                     data-tabs="file camera url facebook gdrive gphotos"
-                                    
                                 />
                             </div>
                             <div id="grBtn" className="cardMain__footer-grupBtn">
