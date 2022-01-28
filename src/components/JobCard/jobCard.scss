@@ -14,11 +14,12 @@
         margin: 20px auto 20px auto;
     }
     &__status {
-        display: grid;align-items: center;
         margin-bottom: 10px;
-        span {
+        &-new {
             width: 61px;
-            height: 20px;
+            display: block;
+            box-sizing: border-box;
+            border-radius: 5px;
             background: #FFE9E9;
             border-radius: 5px;
             font-family: Graphik LC;
@@ -35,6 +36,7 @@
         column-gap: 25px;
         align-items: center;
         &-name {
+
             width: 565px;
             font-family: Graphik LC;
             font-style: normal;

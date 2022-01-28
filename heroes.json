@@ -3,7 +3,7 @@
         {
             "id": 1,
             "imgJobLogo": "https://vacancyimages.rabota.ua/custom-vacancy-93767138-9bd2-408f-bbdf-31c38f6c5286.png",
-            "status": "Новая",
+            "statusText": "Новая",
             "vacancyName": "Junior Front-End developer, Angular (2-10)/ React",
             "vacancyLogo": "https://company-logo-frankfurt.rabota.ua/cdn-cgi/image/w=250/6675059_20201123134247.png",
             "salaryRate": "10 000 — 30 000 ₴",

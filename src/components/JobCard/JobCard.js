@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
-// import imgJobLogo from "../../resources/img/Prof-Photo.jpg";
-// import vacancyLogo from "../../resources/img/vacancy-Name.png";
+import { useState, useEffect } from "react";
 import {
     BatFalse,
     BatTrue,
@@ -13,7 +12,7 @@ import "./media_jobCard.scss";
 
 const JobCard = ({
     imgJobLogo,
-    status,
+    statusText,
     vacancyName,
     vacancyLogo,
     salaryRate,
@@ -25,16 +24,29 @@ const JobCard = ({
     benefits3,
     time,
 }) => {
+
+    const [batBtn, setBatBtn] = useState(false);
+    const [favorites, setFavorites] = useState(false);
+
+    const Status = () => {
+
+            if(!batBtn) {
+                return <span className="cardMain__status-new">{statusText}</span>
+            } else {
+                return <span style={{color: '#303A3E', width: '118px', background: '#C8D1D6'}} className="cardMain__status-new">Неинтересная</span>
+            }
+    }
+
     return (
         <Container>
-            <div className="cardMain">
+            <div style={batBtn ? {opacity: ".5"} : {opacity: "1"}} className="cardMain">
                 <div className="cardMain__wrapper">
                     <div className="cardMain__logo">
                         <img src={imgJobLogo} alt="Job Logo" />
                     </div>
                     <div className="cardMain__description">
                         <div className="cardMain__status">
-                            <span>{status}</span>
+                            <Status/>
                         </div>
                         <div className="cardMain__vacancy">
                             <div className="cardMain__vacancy-name">
@@ -47,7 +59,7 @@ const JobCard = ({
                         <div className="cardMain__salary">
                             <div className="cardMain__salary-rate">{salaryRate}</div>
                             <div className="cardMain__salary-descr">
-                            {salaryDescr}
+                                {salaryDescr}
                             </div>
                         </div>
                         <div className="cardMain__address">
@@ -73,11 +85,11 @@ const JobCard = ({
                                     <img src={Group} alt="Group Btn" />
                                     Откликнуться
                                 </button>
-                                <button className="cardMain__footer-favorites">
-                                    <img src={FavoritesFalse} alt="Favorites Btn" />
+                                <button onClick={() => setFavorites(!favorites)} className="cardMain__footer-favorites">
+                                    <img src={favorites ? FavoritesTrue : FavoritesFalse} alt="Favorites Btn" />
                                 </button>
-                                <button className="cardMain__footer-bad">
-                                    <img src={BatFalse} alt="Bat Btn" />
+                                <button onClick={() => setBatBtn(!batBtn)} className="cardMain__footer-bad">
+                                    <img src={batBtn ? BatTrue : BatFalse} alt="Bat Btn" />
                                 </button>
                             </div>
                             <div></div>
