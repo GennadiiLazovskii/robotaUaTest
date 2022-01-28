@@ -91,41 +91,67 @@
             grid-template-rows: 40px;
             justify-content: start;
         }
+        &__address {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(1fr, auto));
+            grid-template-rows: 20px;
+            justify-content: start;
+            align-items: center;
+            &-city {
+                min-width: 100px;
+            }
+        }
         &__badges {
             width: 100%;
             overflow: scroll;
             display: grid;
-            grid-template-columns: repeat(3, minmax(116px, auto));
+            grid-template-columns: repeat(3, minmax(145px, auto));
             grid-template-rows: 30px;
             justify-content: start;
             justify-items: center;
             margin-bottom: 10px;
             &-item {
-                width: 100%;
-                vertical-align: middle;
+                display: block;
+                margin: 0 auto;
+                span {
+                    width: 13000px;
+                }
             }
         }
         &__footer {
             &-btn {
                 width: 310px;
                 margin: 0 auto 10px auto;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap-reverse;
+                display: grid;
+                grid-template-columns: repeat(4, minmax(10px, auto));
+                grid-template-rows: repeat(2, minmax(20px, 40px));
+                grid-template-areas: 
+                'timeGrup . . .'
+                'responseGrup responseGrup . btnGrup ';
+            }
+            #respons {
+                grid-area: responseGrup;
+            }
+            #grBtn {
+                grid-area: btnGrup;
+            }
+            #time {
+                grid-area: timeGrup;
+            }
+            #tab {
+                grid-area: tabGrup;
+
             }
             &-people {
                 margin-right: 50px;
             }
             &-favorites {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
             }
             &-bad {
-                width: 50px;
-                height: 50px;
-            }
-            &-time {
-                margin-left: 7px;
+                width: 40px;
+                height: 40px;
             }
         }
     }

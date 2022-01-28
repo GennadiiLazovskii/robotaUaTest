@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import uploadcare from 'uploadcare-widget/uploadcare.lang.en.min.js';
+import { useState } from "react";
+import uploadcare from 'uploadcare-widget/uploadcare.full.min.js';
 import {
     BatFalse,
     BatTrue,
@@ -28,13 +28,7 @@ const JobCard = ({
 
     const [batBtn, setBatBtn] = useState(false);
     const [favorites, setFavorites] = useState(false);
-
-    const Responce = () => {
-
-        return {
-
-        }
-    }
+    const [upload, setUpload] = useState(null);
 
     const Status = () => {
 
@@ -88,25 +82,26 @@ const JobCard = ({
                     </div>
                     <div className="cardMain__footer">
                         <div className="cardMain__footer-btn">
-                            <div style={batBtn ? {display: 'none'} : {display: 'block'}} className="cardMain__footer-people">
+                            <div id="respons" style={batBtn ? { display: 'none' } : { display: 'block' }} className="cardMain__footer-people">
                                 <img src={Group} alt="Group Btn" />
                                 <input
                                     type="hidden"
                                     role="uploadcare-uploader"
                                     data-public-key="64a89cdc6350badf0291"
                                     data-tabs="file camera url facebook gdrive gphotos"
+                                    
                                 />
                             </div>
-                            <div className="cardMain__footer-grupBtn">
+                            <div id="grBtn" className="cardMain__footer-grupBtn">
                                 <button onClick={() => setFavorites(!favorites)} className="cardMain__footer-favorites">
                                     <img src={favorites ? FavoritesTrue : FavoritesFalse} alt="Favorites Btn" />
                                 </button>
-                                <button onClick={() => setBatBtn(!batBtn)} className="cardMain__footer-bad">
+                                <button  onClick={() => setBatBtn(!batBtn)} className="cardMain__footer-bad">
                                     <img src={batBtn ? BatTrue : BatFalse} alt="Bat Btn" />
                                 </button>
                             </div>
-                            <div></div>
-                            <div className="cardMain__footer-time">{time}</div>
+                            <div id="tab"></div>
+                            <div id="time" className="cardMain__footer-time">{time}</div>
                         </div>
                     </div>
                 </div>
